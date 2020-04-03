@@ -76,14 +76,16 @@ namespace Aspose.Words.Live.Demos.UI.Models
 		public bool RedirectToMainApp { get; set; }
 
 		/// <summary>
+		/// Name of the partial View of controls (e.g. UnlockControls)
+		/// </summary>
+		public string ControlsView { get; set; }
+
+		/// <summary>
 		/// Is canonical page opened (/all)
 		/// </summary>
 		public bool IsCanonical;
 
-		/// <summary>
-		/// Name of the partial View of controls (e.g. SignatureControls)
-		/// </summary>
-		public string ControlsView { get; set; }
+		
 
 		public string AnotherFileText { get; set; }
 		public string UploadButtonText { get; set; }

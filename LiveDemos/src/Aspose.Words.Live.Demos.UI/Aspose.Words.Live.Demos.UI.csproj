@@ -580,6 +580,8 @@
     <Content Include="ViewerApp\Resources\common\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Comparison\Comparison.cshtml" />
     <Content Include="Views\Editor\Editor.cshtml" />
+    <Content Include="Views\Unlock\Unlock.cshtml" />
+    <Content Include="Views\Unlock\UnlockControls.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -589,6 +591,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\UnlockController.cs" />
     <Compile Include="Controllers\EditorHelperController.cs" />
     <Compile Include="Controllers\AsposeWordsEditorController.cs" />
     <Compile Include="Controllers\BaseController.cs" />

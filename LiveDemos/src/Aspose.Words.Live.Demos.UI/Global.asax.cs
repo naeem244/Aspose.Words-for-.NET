@@ -59,6 +59,11 @@ namespace Aspose.Words.Live.Demos.UI
 				 new { controller = "Conversion", action = "Conversion" }
 			);
 			routes.MapRoute(
+				"AsposeWordsUnlockRoute",
+				"{product}/unlock",
+				 new { controller = "Unlock", action = "Unlock" }
+			);
+			routes.MapRoute(
 				"AsposeWordsMergerRoute",
 				"{product}/merger",
 				 new { controller = "Merger", action = "Merger" }

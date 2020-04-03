@@ -25,9 +25,10 @@
    <res name="Send">Send</res>
   <res name="SelectorDropFileMessage">Drop or upload your file</res>
     <res name="ConvertAnotherFile">Convert another file</res>
-  
+	<res name="UnlockPasswordPlaceholder">Type Password</res>
+	<res name="PasswordPlaceholderErrorMessage">Password input can&apos;t be empty</res>
 	<res name="AsposeProductFor"></res>
-
+	<res name="UnlockButton">UNLOCK NOW</res>
 
   <res name="AsposeWordsDescription">Convert Word documents to PDF, HTML, Open Office, image and other formats</res>
   
@@ -58,7 +59,7 @@
 
   <res name="ProductFamily">Product Family</res>
   <res name="ViewerAPPName">Viewer</res>
-  <res name="wordsViewerDesc">View your documents online</res>
+  <res name="wordsViewerDesc">View Microsoft Word &amp; OpenOffice documents online from anywhere, any platform.</res>
   <res name="wordsViewerPageTitle">Word Viewer Online</res>
   <res name="wordsViewerMetaDescription">Free online word document viewer. View, read, search in text, convert word documents online.</res>
   <res name="wordsViewerTitle">Free online document viewer</res>
@@ -71,6 +72,11 @@
 	<res name="HowtoViewerFeature1">Click inside the file drop area to upload file or drag &amp; drop file.</res>
 	<res name="HowtoViewerFeature2">Your document file will be automatically rendered for you to view instantly.</res>
 	<res name="HowtoViewerFeature3">Download the document file in original, image or PDF format.</res>
+
+	<res name="HowtoUnlockTitle">How to Unlock Word files using {1}</res>
+	<res name="HowtoUnlockFeature1">Click inside the file drop area to upload file or drag &amp; drop file.</res>
+	<res name="HowtoUnlockFeature2">Your document file will be rendered automatically to unlock.</res>
+	<res name="HowtoUnlockFeature3">Download link of document file will be available instantly after unlock.</res>
 
   <res name="Viewerh4">Viewer</res>
   <res name="btnViewNow">VIEW NOW</res>
@@ -248,7 +254,7 @@
 
   <res name="ComparisonAPPName">Comparison</res>
   
-  <res name="wordsComparisonDesc">Compare two versions of a document and highlight differences</res>
+  <res name="wordsComparisonDesc">Compare two Word documents and download the resultant file highlighting the differences.</res>
   <res name="wordsComparisonPageTitle">Compare Word Documents Online</res>
   <res name="wordsComparisonMetaDescription">Free online comparison of Word files. Highlight differences and view them online. Compare different file formats like Word, OpenOffice, HTML, etc.</res>
   <res name="wordsComparisonTitle">Document comparison online</res>
@@ -268,7 +274,7 @@
   <res name="ComparisonLiFeature1">Instantly download, view or send output file as an email</res>
   <res name="ComparisonAnotherFile">Compare other documents</res>
   <res name="ComparisonSuccessMessage">Your files have been processed successfully</res>
-  <res name="ComparisonSentEmailSuccessMessage">Your file has been compared successfully, please check your email to download compared file</res>
+  
   <res name="ComparisonViewer">VIEW DIFFERENCES</res>
   <res name="ComparisonOtherFeaturesTitle">Other Supported Comparisons</res>
   <res name="ComparisonOtherFeaturesTitleSub">You can also do comparison of other file formats. Please see the list below.</res>
@@ -279,7 +285,7 @@
   <res name="wordsMergerMetaDescription">Free online document merger. Merge, concatenate or combine Word documents online.</res>
   <res name="wordsMergerTitle">Free online document merger</res>
   <res name="wordsMergerSubTitle">Merge/Combine Word documents.</res>
-  <res name="wordsMergerDesc">Merge Microsoft Word &amp; OpenOffice documents</res>
+  <res name="wordsMergerDesc">Merge multiple Word documents to generate a single resultant file.</res>
 
   <res name="wordsMergerLiFeature1">Combine different file formats into one</res>
  
@@ -370,7 +376,7 @@
 
   <res name="EditorAPPName">Editor</res>
   
-  <res name="wordsEditorDesc">Edit your documents</res>
+  <res name="wordsEditorDesc">Edit Microsoft Office (DOC, DOCX, DOTX, RTF), Open Document (ODT), TXT and HTML files online.</res>
   <res name="wordsEditorPageTitle">Word Editor Online</res>
   <res name="wordsEditorMetaDescription">Free online document editor. View, edit, convert word documents with advanced WYSIWYG editor.</res>
   <res name="wordsEditorTitle">Free online document editor</res>
@@ -476,76 +482,16 @@
   <res name="AssemblyDropDataSource">Drop or upload your data-source file</res>
   <res name="ErrorFileSizeMax">File size should be less than</res>
   <res name="AssemblyAction">Generate report</res>
-
-  <res name="editor">Editor</res>
-  <res name="from">from</res>
-  <res name="to">to</res>
-  <res name="format">format</res>
-  <res name="convert">Convert</res>
-  <res name="other">other</res>
-  <res name="emailDocTitle">Message</res>
-  <res name="tasksDocTitle">File</res>
-  <res name="imagingDocTitle">File</res>
-  <res name="htmlDocTitle">File</res>
-  <res name="diagramDocTitle">File</res>
-  <res name="noteDocTitle">File</res>
-  <res name="3dDocTitle">File</res>
-  <res name="cadDocTitle">File</res>
-  <res name="gisDocTitle"></res>
-  <res name="epsDocTitle">File</res>
-  <res name="psdDocTitle">File</res>
-  <res name="xpsDocTitle">File</res>
-  <res name="xpsTitle">XPS</res>
-  <res name="svgTitle">SVG</res>
-  <res name="epubTitle">EPUB</res>
-  <res name="wordTitle">Word</res>
-  <res name="pdfTitle">PDF</res>
-  <res name="excelTitle">Excel</res>
-  <res name="cellTitle">Excel</res>
-  <res name="taskTitle">Microsoft Project®</res>
-  <res name="powerpointTitle">PowerPoint</res>
-  <res name="slideTitle">PowerPoint</res>
-  <res name="htmlTitle">HTML</res>
-  <res name="epsTitle">PostScript</res>
-  <res name="psdTitle">PSD</res>
-  <res name="bmpTitle">BMP</res>
-  <res name="jpgTitle">JPG</res>
-  <res name="tiffTitle">TIFF</res>
-  <res name="odpTitle">ODP</res>
-  <res name="odtTitle">ODT</res>
-  <res name="odsTitle">ODS</res>
-  <res name="imageTitle">Image</res>
-  <res name="emailTitle">Email</res>
-  <res name="msgTitle">MSG</res>
-  <res name="emlTitle">EML</res>
-  <res name="mhtTitle">MHT</res>
-  <res name="texTitle">TEX</res>
-  <res name="projectTitle">Project</res>
-  <res name="visioTitle">Visio</res>
-  <res name="onenoteTitle">OneNote</res>
-  <res name="noteTitle">OneNote</res>
-  <res name="photoshopTitle">Photoshop</res>
-  <res name="rasterTitle">Raster</res>
-  <res name="metafileTitle">Metafile</res>
-  <res name="markdownTitle">Markdown</res>
-  <res name="mhtmlTitle">MHTML</res>
-  <res name="primaveraTitle">Primavera</res>
-  <res name="textTitle">Text</res>
-  <res name="3dTitle">3D</res>
-  <res name="autodeskTitle">Autodesk</res>
-  <res name="wavefrontTitle">Wavefront</res>
-  <res name="3dstudioTitle">3D Studio</res>
-  <res name="dracoTitle">Draco</res>
-  <res name="autocadTitle">AutoCAD</res>
-  <res name="cadTitle">AutoCAD</res>
-  <res name="gisTitle">GIS Formats</res>
-  <res name="googleearthTitle">Google Earth</res>
-  <res name="geojsonTitle">GeoJSON</res>
-  <res name="esrishapefileTitle">ESRI Shapefile</res>
-  <res name="postscriptTitle">PostScript</res>
-  <res name="pstTitle">PST</res>
-  <res name="ostTitle">OST</res>
-  <res name="mboxTitle">MBOX</res>  
+	
+	<res name="wordsUnlockPageTitle">Word Documents Unlocker Online Free</res>
+	<res name="wordsUnlockMetaDescription">Unlock password protected word documents online for free. Remove password online.</res>
+	<res name="wordsUnlockTitle">Free online documents unlocker</res>
+	<res name="wordsUnlockSubTitle">Unlock password protected word documents.</res>
+	<res name="wordsUnlockLiFeature1">Remove password in multiple files</res>
+	<res name="wordsUnlockLiFeature2">We don't decrypt or recover your documents</res>
+	<res name="wordsUnlockValidationExpression">.docx|.doc|.dotx|.dot|.odt|.ott</res>
+	
+  
   
 	<res name ="wordsSaveAsOptions">DOCX,PDF,EPUB,HTML,TXT,DOC,DOT,DOCM,DOTX,DOTM,RTF,MHTML,ODT,OTT,PS,PCL,XPS,BMP,EMF,PNG,JPG,GIF,TIFF</res>
 	<res name="photoshopSaveAsExtensions">PSD</res>
@@ -642,28 +588,7 @@
   <res name="AsposePSD">Aspose.PSD</res>
   <res name="PSDPageMainTitle">Free Online PSD Apps</res>
   <res name="PSDPageSubHeading">Convert or View your PSD files online from anywhere</res>
-  <res name="PSDConversionDesc">Convert your PSD files to Image formats</res>
-  <res name="EncodeTypePDF417">PDF 417</res>
-  <res name="EncodeTypeDataMatrix">Data Matrix</res>
-  <res name="EncodeTypeAztec">Aztec</res>
-  <res name="EncodeTypeQR">QR</res>
-  <res name="EncodeTypeCode39Standard">Code 39 Standard</res>
-  <res name="EncodeTypeCode128">Code 128</res>
-  <res name="EncodeTypeEAN8">EAN-8</res>
-  <res name="EncodeTypeEAN13">EAN-13</res>
-  <res name="EncodeTypeEAN14">EAN-14</res>
-  <res name="EncodeTypeISSN">ISSN</res>
-  <res name="EncodeTypeISMN">ISMN</res>
-  <res name="EncodeTypePharmacode">Pharmacode</res>
-  <res name="EncodeTypePostnet">Postnet</res>
-  <res name="EncodeTypeUPCA">UPC-A</res>
-  <res name="EncodeTypeUPCE">UPC-E</res>
-
-
-  
-  `
-
- 
+  <res name="PSDConversionDesc">Convert your PSD files to Image formats</res> 
   <res name="404">404</res>
   <res name="HomePage">Home Page</res>
   <res name="EnterNumericData">Please enter data as numeric value</res>
@@ -673,8 +598,7 @@
   <res name="AddWatermarktoImageURL">add</res>
   <res name="AddDiagnolWatermakPageTitle">Add Diagonal Watermark</res>
   <res name="AddDiagnolWatermarktoImageSubPageTitle">Add Diagonal Watermark to your image</res>
-  <res name="ocrValidationExpression">.jpg|.bmp|.tiff|.gif|.png|.emf|.svg|.eps</res>
-  
+  <res name="ocrValidationExpression">.jpg|.bmp|.tiff|.gif|.png|.emf|.svg|.eps</res>  
   <res name="wordsConversionSaveAsOptions">PDF,DOCX,EPUB,HTML,TXT,DOC,DOT,DOCM,DOTX,DOTM,RTF,MHTML,ODT,OTT,PS,PCL,XPS,BMP,EMF,PNG,JPG,GIF,TIFF</res>
  
   <res name="AddAnnotationText">Annotation</res>
@@ -723,7 +647,7 @@
 	<res name="wordsConversionMetaDescription">Free online Word, OpenOffice, Text or HTML converter. Convert multiple files in one click.</res>
 	<res name="wordsConversionTitle">Free online converter</res> 
   
-	<res name="wordsConversionDesc">Convert your documents to PDF, HTML and other file formats</res>
+	<res name="wordsConversionDesc">Convert Microsoft Word and OpenOffice documents to PDF, ePUB or HTML formats.</res>
   
   
   <res name="ConversionFeature1">Fast and Easy Conversion</res>
@@ -739,7 +663,20 @@
   <res name="ConversionViewer">VIEW RESULTS</res>
   <res name="ConversionAction">Convert</res>
   <res name="wordsConversionSubTitle">Convert Word, OpenOffice, Text or HTML documents to PDF, HTML &amp; images.</res>
- 
+	<res name ="UnlockAPPName">Unlock</res>
+	<res name="wordsUnlockDesc">Unlock your password protected MS Word and OpenOffice Documents within web browser.</res>
+
+	<res name="UnlockFeature1">Fast and Easy Unlock</res>
+	<res name="UnlockFeature1Description">Upload your password protected file, enter current password and click on "UNLOCK NOW" button. You will get unlocked file as soon as the unlocking is performed</res>
+	<res name="UnlockFeature2">Unlock from Anywhere</res>
+	<res name="UnlockFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
+	<res name="UnlockFeature3">Unlock Quality</res>
+	<res name="UnlockLiFeature1">Instantly download or send output file as an email</res>
+	<res name="UnlockAnotherFile">Unlock another file</res>
+	<res name="UnlockSuccessMessage">Your file has been unlocked successfully</res>
+	
+	<res name="UnlockAction">Unlock</res>
+	
 </resources>
 
 

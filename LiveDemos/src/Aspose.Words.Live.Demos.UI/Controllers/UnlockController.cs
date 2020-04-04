@@ -14,24 +14,20 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 
 
 		[HttpPost]
-		public Response Unlock(string outputType)
+		public Response Unlock(string outputType, string passw)
 		{
 			Response response = null;
 			if (Request.Files.Count > 0)
 			{
-				var docs =  UploadDocuments(Request);
+				var docs =  UploadFiles(Request);
 
-				AsposeWordsConversion wordsConversion = new AsposeWordsConversion();
-				response = wordsConversion.ConvertFile(docs, outputType);
+				AsposeWordsUnlock wordsunlock = new AsposeWordsUnlock();
+				response = wordsunlock.Unlock(docs, outputType, passw);
 
 			}
 
-			return response;			
-				
+			return response;				
 		}
-
-		
-
 		public ActionResult Unlock()
 		{
 			var model = new ViewModel(this, "Unlock")
@@ -43,10 +39,8 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 			};
 			if (model.RedirectToMainApp)
 				return Redirect("/words/" + model.AppName.ToLower());
-			return View(model);
-			
-		}
-		
+			return View(model);			
+		}	
 
 	}
 }

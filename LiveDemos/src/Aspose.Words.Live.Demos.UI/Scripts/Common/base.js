@@ -323,7 +323,7 @@ function requestUnlock() {
 	let data = fileDrop.prepareFormData();
 	if (data === null)
 		return;
-	let url = o.UIBasePath + 'AsposeWordsUnlock/Unlock?passw=' + encodeURI($('#passw').val())
+	let url = o.UIBasePath + 'Unlock/Unlock?passw=' + encodeURI($('#passw').val())
 		+ '&outputType=' + $('#saveAs').val();
 	request(url, data);
 }

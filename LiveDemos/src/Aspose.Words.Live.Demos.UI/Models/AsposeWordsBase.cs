@@ -21,6 +21,7 @@ using Aspose.Words.Saving;
 using Newtonsoft.Json.Linq;
 using Aspose.Words.Live.Demos.UI.Config;
 using System.Web.Http;
+using Aspose.Words.Live.Demos.UI.Models.Common;
 
 namespace Aspose.Words.Live.Demos.UI.Models
 {
@@ -215,7 +216,18 @@ namespace Aspose.Words.Live.Demos.UI.Models
 			}
 		}
 
-
+		/// <summary>
+		/// Set default parameters into Opts
+		/// </summary>
+		/// <param name="InputFiles"></param>
+		protected void SetDefaultOptions(InputFiles docs, string outputType)
+		{
+			if (docs.Count > 0)
+			{
+				SetDefaultOptions(docs[0].FileName, outputType);
+				Opts.CreateZip = docs.Count > 1 || Opts.IsPicture;
+			}
+		}
 
 		/// <summary>
 		/// Set default parameters into Opts

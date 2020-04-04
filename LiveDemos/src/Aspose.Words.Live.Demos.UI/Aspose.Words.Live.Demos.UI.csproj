@@ -618,8 +618,10 @@
     <Compile Include="Helpers\MultipartFormDataStreamProviderSafe.cs" />
     <Compile Include="Helpers\PathSafe.cs" />
     <Compile Include="Controllers\AsposeWordsViewerController.cs" />
-    <Compile Include="Models\AsposeWordsComparisonController.cs" />
+    <Compile Include="Models\AsposeWordsComparison.cs" />
     <Compile Include="Models\AsposeWordsParser.cs" />
+    <Compile Include="Models\AsposeWordsUnlock.cs" />
+    <Compile Include="Models\FileSafeResult.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Helpers\XmlActionResult.cs" />
     <Compile Include="Models\AsposeWordsBase.cs" />
@@ -627,7 +629,6 @@
     <Compile Include="Models\AsposeWordsConversion.cs" />
     <Compile Include="Models\BaseResult.cs" />
     <Compile Include="Models\ExtensionInfoModel.cs" />
-    <Compile Include="Models\FileSafeResult.cs" />
     <Compile Include="Models\FileUploadResult.cs" />
     <Compile Include="Models\JSOptions.cs" />
     <Compile Include="Models\License.cs" />
@@ -635,7 +636,6 @@
     <Compile Include="Models\HowToModel.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Models\MimeMultipart.cs" />
     <Compile Include="Models\UploadFileModel.cs" />
     <Compile Include="Models\LandingPageModel.cs" />
     <Compile Include="Models\ViewModel.cs" />
@@ -666,7 +666,6 @@
     </Compile>
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\AsposeWordsMerger.cs" />
-    <Compile Include="Services\FileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PathProcessor.cs" />
     <Compile Include="Services\RequestData.cs" />

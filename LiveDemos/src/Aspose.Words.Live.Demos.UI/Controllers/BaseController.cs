@@ -1,5 +1,6 @@
 using Aspose.Words.Live.Demos.UI.Config;
 using Aspose.Words.Live.Demos.UI.Models;
+using Aspose.Words.Live.Demos.UI.Models.Common;
 using Aspose.Words.Live.Demos.UI.Services;
 using Aspose.Words.Live.Demos.UI.Helpers;
 using System;
@@ -48,6 +49,45 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 			{
 				Console.WriteLine(ex.Message);
 				return new Document[0];
+			}
+		}
+
+		protected InputFiles UploadFiles(HttpRequestBase Request)
+		{
+			try
+			{
+				string _folderName = Guid.NewGuid().ToString();
+				var pathProcessor = new PathProcessor(_folderName);
+				InputFiles _inputFiles = new InputFiles();
+				//foreach (string fileName in Request.Files)
+				for (int i = 0; i < Request.Files.Count; i++)
+
+				{
+					HttpPostedFileBase postedFile = Request.Files[i];
+
+					if (postedFile != null)
+					{
+						// Check if File is available.
+						if (postedFile != null && postedFile.ContentLength > 0)
+						{
+							string fn = System.IO.Path.GetFileName(postedFile.FileName);
+							string _savepath = pathProcessor.SourceFolder + "\\" + fn;
+							postedFile.SaveAs(_savepath);
+							_inputFiles.Add(new InputFile(fn, _folderName, _savepath));
+
+						}
+					}
+				}
+				return _inputFiles;
+			}
+			catch (IncorrectPasswordException)
+			{
+				return null;
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+				return null;
 			}
 		}
 		/// <summary>

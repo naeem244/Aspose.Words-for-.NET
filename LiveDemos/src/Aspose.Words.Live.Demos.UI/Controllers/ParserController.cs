@@ -19,10 +19,11 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 			Response response = null;
 			if (Request.Files.Count > 0)
 			{
-				var docs =  UploadDocuments(Request);
+				string _sourceFolder = Guid.NewGuid().ToString();
+				var docs =  UploadDocuments(Request, _sourceFolder);
 
 				AsposeWordsParser wordsParser = new AsposeWordsParser();
-				response = wordsParser.Parse(docs, outputType);
+				response = wordsParser.Parse(docs, outputType, _sourceFolder);
 
 			}
 

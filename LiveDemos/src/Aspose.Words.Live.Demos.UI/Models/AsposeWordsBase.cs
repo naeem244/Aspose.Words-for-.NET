@@ -235,6 +235,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 		/// <param name="filename"></param>
 		private void SetDefaultOptions(string filename, string outputType)
     {
+			//Opts.FolderName = FolderName;
       Opts.ResultFileName = filename;
       Opts.FileName = Path.GetFileName(filename);
 

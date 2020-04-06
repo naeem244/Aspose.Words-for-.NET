@@ -21,7 +21,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 	public class AsposeWordsParser : AsposeWordsBase
   {
 
-		public Response Parse(Document[] docs, string outputType)
+		public Response Parse(Document[] docs, string outputType, string sourceFolder)
 		{
 			
 			if (docs == null)
@@ -35,6 +35,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 			Opts.ZipFileName = docs.Length > 1 ? "Parser" : Path.GetFileNameWithoutExtension(docs[0].OriginalFileName);
 			Opts.OutputType = ".txt";
 			Opts.CreateZip = true;
+			Opts.FolderName = sourceFolder;
 
 			return  Process((inFilePath, outPath, zipOutFolder) =>
 			{

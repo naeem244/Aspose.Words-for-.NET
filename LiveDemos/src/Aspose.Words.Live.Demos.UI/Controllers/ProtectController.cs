@@ -8,13 +8,13 @@ using System.Web.Mvc;
 
 namespace Aspose.Words.Live.Demos.UI.Controllers
 {
-	public class UnlockController : BaseController  
+	public class ProtectController : BaseController  
 	{
 		public override string Product => (string)RouteData.Values["product"];
 
 
 		[HttpPost]
-		public Response Unlock(string outputType, string passw)
+		public Response Protect(string passw)
 		{
 			Response response = null;
 			if (Request.Files.Count > 0)
@@ -22,20 +22,18 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 				var docs =  UploadFiles(Request);
 
 				AsposeWordsProtection asposeWordsProtection = new AsposeWordsProtection();
-				response = asposeWordsProtection.Unlock(docs, outputType, passw);
-
+				response = asposeWordsProtection.Protect(docs, passw);
 			}
 
 			return response;				
 		}
-		public ActionResult Unlock()
+		public ActionResult Protect()
 		{
-			var model = new ViewModel(this, "Unlock")
+			var model = new ViewModel(this, "Protect")
 			{
-				ControlsView = "UnlockControls",
-				SaveAsComponent = true,
-				MaximumUploadFiles = 10,
-				DropOrUploadFileLabel = Resources["DropOrUploadFiles"],
+				ControlsView = "UnlockControls",				
+				MaximumUploadFiles = 1,
+				DropOrUploadFileLabel = Resources["DropOrUploadFile"],
 				ShowViewerButton = false
 			};
 			if (model.RedirectToMainApp)

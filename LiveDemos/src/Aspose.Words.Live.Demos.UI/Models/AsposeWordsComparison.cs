@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Linq;
 using Aspose.Words.Live.Demos.UI.Controllers;
+using System.Web.Mvc;
 
 namespace Aspose.Words.Live.Demos.UI.Models
 {
@@ -15,7 +16,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 	public class AsposeWordsComparison : AsposeWordsBase
 	{ 
 
-    public Response Compare(Document[] docs)
+    public Response Compare(Document[] docs, string sourceFolder)
 		{
 
 			if (docs == null)
@@ -29,10 +30,12 @@ namespace Aspose.Words.Live.Demos.UI.Models
 
 			SetDefaultOptions(docs, "");
 			Opts.AppName = "Comparison";
+			
 			Opts.MethodName = "Compare";
 			Opts.ResultFileName = $"{Path.GetFileNameWithoutExtension(docs[0].OriginalFileName)} compared to {Path.GetFileNameWithoutExtension(docs[1].OriginalFileName)}.docx";
 			Opts.OutputType = "docx";
 			Opts.CreateZip = false;
+			Opts.FolderName = sourceFolder;
 
 			return  Process((inFilePath, outPath, zipOutFolder) =>
 			{

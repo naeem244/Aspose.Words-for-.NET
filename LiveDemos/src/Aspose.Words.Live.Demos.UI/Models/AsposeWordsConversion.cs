@@ -15,7 +15,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 	public class AsposeWordsConversion : AsposeWordsBase
 	{ 
 
-    public Response ConvertFile(Document[] docs, string outputType)
+    public Response ConvertFile(Document[] docs, string outputType, string sourceFolder)
 		{
 			
 			if (docs == null)
@@ -27,6 +27,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 			Opts.AppName = " Conversion";
 			Opts.MethodName = "ConvertFile";
 			Opts.ZipFileName = docs.Length > 1 ? "Converted documents" : Path.GetFileNameWithoutExtension(docs[0].OriginalFileName);
+			Opts.FolderName = sourceFolder;
 
 			return  Process((inFilePath, outPath, zipOutFolder) =>
 			{

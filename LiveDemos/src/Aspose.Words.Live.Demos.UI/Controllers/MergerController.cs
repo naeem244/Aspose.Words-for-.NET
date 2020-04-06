@@ -17,12 +17,14 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 		public Response Merger(string outputType)
 		{
 			Response response = null;
+			
 			if (Request.Files.Count > 0)
 			{
-				var docs =  UploadDocuments(Request);
+				string _sourceFolder = Guid.NewGuid().ToString();
+				var docs =  UploadDocuments(Request, _sourceFolder);
 
 				AsposeWordsMerger wordsMerger = new AsposeWordsMerger();
-				response = wordsMerger.Merge(docs, outputType);
+				response = wordsMerger.Merge(docs, outputType, _sourceFolder);
 
 			}
 

@@ -15,16 +15,14 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 	public abstract class BaseController : Controller
 	{
 		
-		protected Document[] UploadDocuments(HttpRequestBase Request)
+		protected Document[] UploadDocuments(HttpRequestBase Request, string sourceFolder)
 		{
 			try
-			{
-				
-				var pathProcessor = new PathProcessor(Guid.NewGuid().ToString());
+			{								
+				var pathProcessor = new PathProcessor(sourceFolder);
 				List<Document> documents = new List<Document>();
 				//foreach (string fileName in Request.Files)
 				for (int i = 0; i < Request.Files.Count; i++)
-
 				{
 					HttpPostedFileBase postedFile = Request.Files[i];
 

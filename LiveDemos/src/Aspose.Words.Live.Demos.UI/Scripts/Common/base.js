@@ -327,6 +327,16 @@ function requestUnlock() {
 		+ '&outputType=' + $('#saveAs').val();
 	request(url, data);
 }
+function requestProtect() {
+	if (!validateUnlock())
+		return;
+	let data = fileDrop.prepareFormData();
+	if (data === null)
+		return;
+	let url = o.UIBasePath + 'Protect/Protect?passw=' + encodeURI($('#passw').val());
+		
+	request(url, data);
+}
 function validateComparison() {
 	if (fileDrop.droppedFiles.length === 1 && fileDrop.droppedFiles.length === 1)
 		return true;

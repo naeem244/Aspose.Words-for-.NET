@@ -15,10 +15,36 @@ using Aspose.Words;
 namespace Aspose.Words.Live.Demos.UI.Models
 {
 	///<Summary>
-	/// AsposeWordsUnlock class to remove password in documents
+	/// AsposeWordsProtection class to remove password in documents
 	///</Summary>
-	public class AsposeWordsUnlock : AsposeWordsBase
+	public class AsposeWordsProtection : AsposeWordsBase
 	{
+
+		public Response Protect(InputFiles files, string password)
+		{
+			if (files.Count == 0 || files.Count > MaximumUploadFiles)
+				return MaximumFileLimitsResponse;
+			string outputType = "";
+			SetDefaultOptions(files, outputType);
+			Opts.AppName = "Protect";
+			Opts.MethodName = "Protect";
+			Opts.FolderName = files[0].FolderName;
+			Opts.ZipFileName = "Protect document";	
+			
+			return Process((inFilePath, outPath, zipOutFolder) =>
+			{
+				//DOC, DOCX, DOT, DOTX,						
+				Aspose.Words.Saving.SaveOptions saveOptions = new Aspose.Words.Saving.DocSaveOptions() { Password = password };
+				if (outputType.StartsWith("o")) //ODT, OTT
+				{
+					saveOptions = new Aspose.Words.Saving.OdtSaveOptions() { Password = password };
+				}
+
+				Aspose.Words.Document document = new Aspose.Words.Document(inFilePath);
+				document.Save(outPath, saveOptions);
+			});
+		}
+
 		///<Summary>
 		/// Unlock method
 		///</Summary>
@@ -32,6 +58,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 			Opts.AppName = "Unlock";
 			Opts.MethodName = "Unlock";
 			Opts.ZipFileName = "Unlocked documents";
+			Opts.FolderName = files[0].FolderName;
 
 			var lck = new object();
 			var catchedException = false;

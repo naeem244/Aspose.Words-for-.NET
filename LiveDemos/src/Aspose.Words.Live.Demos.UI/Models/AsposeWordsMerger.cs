@@ -25,7 +25,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
     ///</Summary>
    
 
-		public Response Merge(Document[] docs, string outputType)
+		public Response Merge(Document[] docs, string outputType, string sourceFolder)
     {
 
 			if (docs == null)
@@ -40,6 +40,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 			Opts.ZipFileName = "Merged document";
 			Opts.AppName = " Merger";
 			Opts.MethodName = "Merge";
+			Opts.FolderName = sourceFolder;
 
 			return  Process((inFilePath, outPath, zipOutFolder) =>
 			{

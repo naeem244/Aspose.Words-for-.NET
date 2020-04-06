@@ -581,7 +581,8 @@
     <Content Include="Views\Comparison\Comparison.cshtml" />
     <Content Include="Views\Editor\Editor.cshtml" />
     <Content Include="Views\Unlock\Unlock.cshtml" />
-    <Content Include="Views\Unlock\UnlockControls.cshtml" />
+    <Content Include="Views\Shared\UnlockControls.cshtml" />
+    <Content Include="Views\Protect\Protect.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -591,6 +592,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ProtectController.cs" />
     <Compile Include="Controllers\UnlockController.cs" />
     <Compile Include="Controllers\EditorHelperController.cs" />
     <Compile Include="Controllers\AsposeWordsEditorController.cs" />
@@ -620,7 +622,7 @@
     <Compile Include="Controllers\AsposeWordsViewerController.cs" />
     <Compile Include="Models\AsposeWordsComparison.cs" />
     <Compile Include="Models\AsposeWordsParser.cs" />
-    <Compile Include="Models\AsposeWordsUnlock.cs" />
+    <Compile Include="Models\AsposeWordsProtection.cs" />
     <Compile Include="Models\FileSafeResult.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Helpers\XmlActionResult.cs" />

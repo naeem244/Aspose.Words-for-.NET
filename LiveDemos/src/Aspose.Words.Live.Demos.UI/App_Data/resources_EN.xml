@@ -490,8 +490,8 @@
 	<res name="wordsUnlockLiFeature1">Remove password in multiple files</res>
 	<res name="wordsUnlockLiFeature2">We don't decrypt or recover your documents</res>
 	<res name="wordsUnlockValidationExpression">.docx|.doc|.dotx|.dot|.odt|.ott</res>
-	
-  
+
+	<res name="wordsProtectValidationExpression">.docx|.doc|.dotx|.dot|.odt|.ott</res>
   
 	<res name ="wordsSaveAsOptions">DOCX,PDF,EPUB,HTML,TXT,DOC,DOT,DOCM,DOTX,DOTM,RTF,MHTML,ODT,OTT,PS,PCL,XPS,BMP,EMF,PNG,JPG,GIF,TIFF</res>
 	<res name="photoshopSaveAsExtensions">PSD</res>
@@ -673,10 +673,33 @@
 	<res name="UnlockFeature3">Unlock Quality</res>
 	<res name="UnlockLiFeature1">Instantly download or send output file as an email</res>
 	<res name="UnlockAnotherFile">Unlock another file</res>
-	<res name="UnlockSuccessMessage">Your file has been unlocked successfully</res>
-	
+	<res name="UnlockSuccessMessage">Your file has been unlocked successfully</res>	
 	<res name="UnlockAction">Unlock</res>
+	<res name="ProtectAPPName">Protect</res>
+	<res name="ProtectButton">PROTECT NOW</res>
+	<res name="ProtectFeature1">Fast and Easy Protection</res>
+	<res name="ProtectFeature1Description">Upload your file, enter new password and click on "PROTECT NOW" button. You will get protected file as soon as the protection is performed</res>
+	<res name="ProtectFeature2">Protect from Anywhere</res>
+	<res name="ProtectFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
+	<res name="ProtectFeature3">Protection Quality</res>
+	<res name="ProtectLiFeature1">Protect your word documents with password</res>
 	
+	<res name="ProtectAnotherFile">Protect another file</res>
+	<res name="ProtectSuccessMessage">Your file has been protected successfully</res>
+
+	<res name="ProtectPasswordPlaceholder">Type Password</res>
+	<res name="ProtectAction">Protect</res>
+
+	<!-- Protect Apps - How To-->
+	<res name="wordsProtectTitle">Free Online Microsoft Word and OpenOffice documents Protection</res>
+	<res name="wordsProtectSubTitle">Protect Microsoft Word and OpenOffice documents with a password.</res>
+	<res name="HowtoProtectTitle">How to Protect Word Documents using {1} App</res>
+	<res name="HowtoProtectFeature1">Click inside the file drop area to upload a file or drag &amp; drop a file.</res>
+	<res name="HowtoProtectFeature2">Enter new password in Password input field to make your word document password protected.</res>
+	<res name="HowtoProtectFeature3">Click on Protect Now button. Download link of password protected word document will be shown.</res>
+	<res name="wordsProtectPageTitle">Free Online Microsoft Word and OpenOffice documents Protection</res>
+	<res name="wordsProtectMetaDescription">Protect Microsoft Word and OpenOffice documents online. Make password protected documents.</res>
+	<res name="wordsProtectDesc">Protect your documents with a password.</res>
 </resources>
 
 

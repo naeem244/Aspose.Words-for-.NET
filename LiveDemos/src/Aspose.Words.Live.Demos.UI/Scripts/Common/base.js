@@ -83,8 +83,13 @@ function workSuccess(data, textStatus, xhr) {
 		var statusCode = response[0];
 		var fileName = response[1];
 		var folderName = response[2];
+		var fileProcessingErrorCode = response[3];
 		if (statusCode === '200') {
 
+			if (fileProcessingErrorCode !== undefined && fileProcessingErrorCode !="0") {
+				showAlert(o.FileProcessingErrorCodes[fileProcessingErrorCode]);
+				return;
+			}
 
 			$('#WorkPlaceHolder').addClass('hidden');
 			$('#DownloadPlaceHolder').removeClass('hidden');
@@ -248,7 +253,7 @@ function requestAnnotation() {
 	let data = fileDrop.prepareFormData();
 	if (data === null)
 		return;
-	let url = o.UIBasePath + 'AsposeWordsAnnotation/Remove';
+	let url = o.UIBasePath + 'Annotation/Remove';
 	request(url, data);
 }	
 
@@ -287,7 +292,7 @@ function requestRedaction() {
 	let data = fileDrop.prepareFormData();
 	if (data === null)
 		return;
-	let url = o.UIBasePath + 'AsposeWordsRedaction/Redact?outputType=' + $('#saveAs').val() +
+	let url = o.UIBasePath + 'Redaction/Redaction?outputType=' + $('#saveAs').val() +
 		'&searchQuery=' + encodeURI($('#searchQuery').val()) +
 		'&replaceText=' + encodeURI($('#replaceText').val()) +
 		'&caseSensitive=' + $('#caseSensitive').prop('checked') +
@@ -308,7 +313,7 @@ function requestSearch() {
 	let data = fileDrop.prepareFormData();
 	if (data === null)
 		return;
-	let url = o.UIBasePath + 'AsposeWordsSearch/Search?query=' + encodeURI($('#searchQuery').val());
+	let url = o.UIBasePath + 'Search/Search?query=' + encodeURI($('#searchQuery').val());
 	request(url, data);
 }
 function validateUnlock() {

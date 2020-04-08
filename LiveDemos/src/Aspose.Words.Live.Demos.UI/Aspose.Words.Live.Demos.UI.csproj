@@ -490,6 +490,7 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Bundle.config" />
+    <Content Include="Scripts\Shared\splitter.js" />
     <Content Include="ViewerApp\app.controller.main.js" />
     <Content Include="ViewerApp\app.js" />
     <Content Include="ViewerApp\Default.aspx" />
@@ -583,6 +584,13 @@
     <Content Include="Views\Unlock\Unlock.cshtml" />
     <Content Include="Views\Shared\UnlockControls.cshtml" />
     <Content Include="Views\Protect\Protect.cshtml" />
+    <Content Include="Views\Annotation\Annotation.cshtml" />
+    <Content Include="Views\Redaction\Redaction.cshtml" />
+    <Content Include="Views\Shared\RedactionControls.cshtml" />
+    <Content Include="Views\Shared\SearchControls.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\Shared\SplitterControls.cshtml" />
+    <Content Include="Views\Splitter\Splitter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -592,7 +600,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\SplitterController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ProtectController.cs" />
+    <Compile Include="Controllers\AnnotationController.cs" />
+    <Compile Include="Controllers\RedactionController.cs" />
     <Compile Include="Controllers\UnlockController.cs" />
     <Compile Include="Controllers\EditorHelperController.cs" />
     <Compile Include="Controllers\AsposeWordsEditorController.cs" />
@@ -620,9 +632,13 @@
     <Compile Include="Helpers\MultipartFormDataStreamProviderSafe.cs" />
     <Compile Include="Helpers\PathSafe.cs" />
     <Compile Include="Controllers\AsposeWordsViewerController.cs" />
+    <Compile Include="Models\AsposeWordsSplitter.cs" />
+    <Compile Include="Models\AsposeWordsRedaction.cs" />
     <Compile Include="Models\AsposeWordsComparison.cs" />
+    <Compile Include="Models\AsposeWordsAnnotation.cs" />
     <Compile Include="Models\AsposeWordsParser.cs" />
     <Compile Include="Models\AsposeWordsProtection.cs" />
+    <Compile Include="Models\AsposeWordsSearch.cs" />
     <Compile Include="Models\FileSafeResult.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Helpers\XmlActionResult.cs" />

@@ -64,6 +64,16 @@ namespace Aspose.Words.Live.Demos.UI
 				 new { controller = "Unlock", action = "Unlock" }
 			);
 			routes.MapRoute(
+				"AsposeWordsRedactionRoute",
+				"{product}/redaction",
+				 new { controller = "Redaction", action = "Redaction" }
+			);
+			routes.MapRoute(
+				"AsposeWordsSearchRoute",
+				"{product}/search",
+				 new { controller = "Search", action = "Search" }
+			);
+			routes.MapRoute(
 				"AsposeWordsProtectRoute",
 				"{product}/protect",
 				 new { controller = "Protect", action = "Protect" }
@@ -72,6 +82,16 @@ namespace Aspose.Words.Live.Demos.UI
 				"AsposeWordsMergerRoute",
 				"{product}/merger",
 				 new { controller = "Merger", action = "Merger" }
+			);
+			routes.MapRoute(
+				"AsposeWordsAnnotationRoute",
+				"{product}/annotation",
+				 new { controller = "Annotation", action = "Annotation" }
+			);
+			routes.MapRoute(
+				"AsposeWordsRemoveAnnotationRoute",
+				"annotation/remove",
+				 new { controller = "Annotation", action = "Remove" }
 			);
 			routes.MapRoute(
 				"AsposeWordsParserRoute",
@@ -93,7 +113,11 @@ namespace Aspose.Words.Live.Demos.UI
 				"{product}/editor",
 				 new { controller = "Editor", action = "Editor" }
 			);
-
+			routes.MapRoute(
+				"AsposeWordsSplitterRoute",
+				"{product}/splitter",
+				 new { controller = "Splitter", action = "Splitter" }
+			);
 			routes.MapPageRoute(
 			  "AsposeWordsDefaultViewerRoute",
 			  "words/view",

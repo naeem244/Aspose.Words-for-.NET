@@ -217,47 +217,47 @@ namespace Aspose.Words.Live.Demos.UI.Controllers
 		///<Summary>
 		/// Thumbnails method to get Thumbnails
 		///</Summary>
-		//[HttpPost]
-		
-		//public HttpResponseMessage Search(RequestData request)
-		//{
-		//	Opts.AppName = "Viewer";
-		//	Opts.FileName = request.fileName;
-		//	Opts.FolderName = request.folderName;
-		//	Opts.MethodName = "Search";
+		[HttpPost]
 
-		//	try
-		//	{
-		//		if (Opts.FolderName.Contains(".."))
-		//			throw new Exception("Break-in attempt");
+		public HttpResponseMessage Search(RequestData request)
+		{
+			Opts.AppName = "Viewer";
+			Opts.FileName = request.fileName;
+			Opts.FolderName = request.folderName;
+			Opts.MethodName = "Search";
 
-		//		if (string.IsNullOrEmpty(request.searchQuery))
-		//			return Request.CreateResponse(HttpStatusCode.OK, new int[] { });
+			try
+			{
+				if (Opts.FolderName.Contains(".."))
+					throw new Exception("Break-in attempt");
 
-		//		var doc = new Document(Opts.WorkingFileName);
-		//		var lst = new HashSet<int>();
-		//		var findings = ""; //new AsposeWordsSearchController.FindCallback();
-		//		var options = new FindReplaceOptions()
-		//		{
-		//			ReplacingCallback = findings,
-		//			Direction = FindReplaceDirection.Forward,
-		//			MatchCase = false
-		//		};
-		//		doc.Range.Replace(new Regex(request.searchQuery, RegexOptions.IgnoreCase), "", options);
-		//		var lc = new LayoutCollector(doc);
-		//		foreach (var mathchedNode in findings.MatchedNodes)
-		//			foreach (var node in mathchedNode.Value.Select(x => x.MatchNode))
-		//			{
-		//				var pageNumber = lc.GetStartPageIndex(node);
-		//				lst.Add(pageNumber);
-		//			}
-		//		return Request.CreateResponse(HttpStatusCode.OK, lst);
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		return ExceptionResponse(ex);
-		//	}
-		//}
+				if (string.IsNullOrEmpty(request.searchQuery))
+					return Request.CreateResponse(HttpStatusCode.OK, new int[] { });
+
+				var doc = new Document(Opts.WorkingFileName);
+				var lst = new HashSet<int>();
+				var findings = new AsposeWordsSearch.FindCallback();
+				var options = new FindReplaceOptions()
+				{
+					ReplacingCallback = findings,
+					Direction = FindReplaceDirection.Forward,
+					MatchCase = false
+				};
+				doc.Range.Replace(new Regex(request.searchQuery, RegexOptions.IgnoreCase), "", options);
+				var lc = new LayoutCollector(doc);
+				foreach (var mathchedNode in findings.MatchedNodes)
+					foreach (var node in mathchedNode.Value.Select(x => x.MatchNode))
+					{
+						var pageNumber = lc.GetStartPageIndex(node);
+						lst.Add(pageNumber);
+					}
+				return Request.CreateResponse(HttpStatusCode.OK, lst);
+			}
+			catch (Exception ex)
+			{
+				return ExceptionResponse(ex);
+			}
+		}
 
 		///<Summary>
 		/// Thumbnails method to get Thumbnails

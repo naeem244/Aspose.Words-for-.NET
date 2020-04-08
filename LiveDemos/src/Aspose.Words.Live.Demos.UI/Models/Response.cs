@@ -108,7 +108,9 @@ namespace Aspose.Words.Live.Demos.UI.Models
 		{
 			//return $"{StatusCode} - {Status}";
 			//return $"{StatusCode}|{HttpUtility.UrlPathEncode(FileName)}|{FolderName}";
-			return $"{StatusCode}|{FileName}|{FolderName}";
+
+		 int _fileProcessingErrorCode =(int)Enum.Parse(typeof(Aspose.Words.Live.Demos.UI.Models.FileProcessingErrorCode), FileProcessingErrorCode.ToString());
+			return $"{StatusCode}|{FileName}|{FolderName}|{_fileProcessingErrorCode}";
 		}
 
 	}

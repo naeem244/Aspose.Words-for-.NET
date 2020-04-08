@@ -131,6 +131,14 @@
   <res name="MetadataAction">Edit metadata in</res>
   <res name="MetadataAnotherFile">Edit metadata in another document</res>
   <res name="MetadataClearButton">Clear All</res>
+	<res name="wordsMetadataValidationExpression">.docx|.doc|.dotx|.dot|.rtf|.odt</res>
+	
+	<res name="wordsMetadataPageTitle">Edit Metadata in Word Document Online</res>
+	<res name="wordsMetadataMetaDescription">Edit Word document properties. Metadata viewer and editor.</res>
+	<res name="wordsMetadataTitle">Online Word metadata editor</res>
+	<res name="wordsMetadataSubTitle">View or edit Word document properties, known as metadata.</res>
+	<res name="wordsMetadataDesc">View &amp; edit Metadata properties of Microsoft Word &amp; OpenOffice documents.</res>
+	
   <res name="WatermarkAPPName">Watermark</res>
   <res name="wordsWatermarkDesc">Add or remove watermark in documents online</res>
   <res name="wordsWatermarkTitle">Free online document watermark</res>
@@ -274,7 +282,7 @@
   <res name="ComparisonOtherFeaturesTitle">Other Supported Comparisons</res>
   <res name="ComparisonOtherFeaturesTitleSub">You can also do comparison of other file formats. Please see the list below.</res>
   <res name="ComparisonAction">Compare</res>
-
+	<res name="MetadataViewer">VIEW DOCUMENT</res>
   <res name="MergerAPPName">Merger</res>
   <res name="wordsMergerPageTitle">Merge Word Documents Online</res>
   <res name="wordsMergerMetaDescription">Free online document merger. Merge, concatenate or combine Word documents online.</res>
@@ -296,7 +304,14 @@
 	<res name="HowtoAnnotationFeature1">Click inside the file drop area to upload a document file or drag &amp; drop a document file.</res>
 	<res name="HowtoAnnotationFeature2">Your document file will be rendered automatically to remove annotations.</res>
 	<res name="HowtoAnnotationFeature3">Download link of document file will be available instantly after remove annotations.</res>
-	
+
+	<res name="HowtoMetadataTitle">How to edit document metadata using {1}</res>
+	<res name="HowtoMetadataFeature1">Click inside the file drop area to upload files or drag &amp; drop files.</res>
+	<res name="HowtoMetadataFeature2">File will be automatically rendered for you to view &amp; edit metadata instantly.</res>
+	<res name="HowtoMetadataFeature3">Download updated document file with metadata.</res>
+	<res name="wordsMetadataLiFeature1">Quick way to change document properties</res>
+	<res name="wordsMetadataLiFeature2">Clean metadata</res>
+	<res name="wordsMetadataLiFeature3">Add custom document properties</res>
   
   <res name="MergerButton">MERGE NOW</res>
   <res name="pdfMergerButton">MERGE</res>

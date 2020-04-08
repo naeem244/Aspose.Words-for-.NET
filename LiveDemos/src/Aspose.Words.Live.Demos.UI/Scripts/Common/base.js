@@ -44,14 +44,34 @@ function hideLoader() {
 	$('#loader').addClass("hidden");
 }
 function generateViewerLink(data) {
-	var response = data.split('|');
+
+	var response = null;
+	var statusCode = null;
+	var fileName = null;
+	var folderName = null;
+	var fileProcessingErrorCode = null;
+	if (data.FileName !== undefined) {
+
+		statusCode = data.StatusCode;
+		fileName = data.FileName;
+		folderName = data.FolderName;
+		fileProcessingErrorCode = data.FileProcessingErrorCode;
+	}
+	else {
+		response = data.split('|');
+		statusCode = response[0];
+		fileName = response[1];
+		folderName = response[2];
+		fileProcessingErrorCode = response[3];
+	}
+	
 
 	//var id = data.FolderName !== undefined ? data.FolderName : data.id;
 	return encodeURI(o.ViewerPath +
 		'FileName=' +
-		response[1] +
+		fileName +
 		'&FolderName=' +
-		response[2] +
+		folderName +
 		'&CallbackURL=' +
 		o.AppURL);
 }
@@ -78,13 +98,29 @@ function sendPageView(url) {
 }
 function workSuccess(data, textStatus, xhr) {
 	hideLoader();
-	var response = data.split('|');
-	if (response.length > 0) {
-		var statusCode = response[0];
-		var fileName = response[1];
-		var folderName = response[2];
-		var fileProcessingErrorCode = response[3];
-		if (statusCode === '200') {
+	var response = null;
+	var statusCode = null;
+	var fileName = null;
+	var folderName = null;
+	var fileProcessingErrorCode = null;
+	if (data.FileName !== undefined) {
+
+		statusCode = data.StatusCode;
+		fileName = data.FileName;
+		folderName = data.FolderName;
+		fileProcessingErrorCode = data.FileProcessingErrorCode;
+	}
+	else {
+		 response = data.split('|');
+		 statusCode = response[0];
+		 fileName = response[1];
+		 folderName = response[2];
+		 fileProcessingErrorCode = response[3];
+	}
+	
+	if (fileName != null) {
+		
+		if (statusCode == '200') {
 
 			if (fileProcessingErrorCode !== undefined && fileProcessingErrorCode !="0") {
 				showAlert(o.FileProcessingErrorCodes[fileProcessingErrorCode]);
@@ -93,7 +129,11 @@ function workSuccess(data, textStatus, xhr) {
 
 			$('#WorkPlaceHolder').addClass('hidden');
 			$('#DownloadPlaceHolder').removeClass('hidden');
-
+			//if (o.ReturnFromViewer === undefined) {
+			//	const pos = o.AppDownloadURL.indexOf('?');
+			//	const url = pos === -1 ? o.AppDownloadURL : o.AppDownloadURL.substring(0, pos);
+			//	sendPageView(url);
+			//}
 			var url = encodeURI(o.UIBasePath + `common/download?fileName=${fileName}&folderName=${folderName}`);
 
 			$('#DownloadButton').attr('href', url);
@@ -267,24 +307,28 @@ function requestConversion() {
 	request(url, data);
 }
 function requestMetadata(data) {
-	let url = o.UIBasePath + 'AsposeWordsMetadata/properties';
-	$.ajax({
-		method: 'POST',
-		url: url,
-		data: JSON.stringify(data),
-		contentType: 'application/json',
-		cache: false,
-		timeout: 600000,
-		success: (d) => {
-			$.metadata(d, data.id, data.FileName);
-		},
-		error: (err) => {
-			if (err.data !== undefined && err.data.Status !== undefined)
-				showAlert(err.data.Status);
-			else
-				showAlert("Error " + err.status + ": " + err.statusText);
-		}
-	});
+	
+
+	var response = data.split('|');
+	if (response.length > 0) {
+		let url = o.UIBasePath + 'api/AsposeWordsMetadata/properties?folderName=' + response[2] + "&fileName=" + response[1];
+		$.ajax({
+			type: 'POST',
+			url: url,			
+			contentType: 'application/json',
+			cache: false,
+			timeout: 600000,
+			success: (d) => {
+				$.metadata(d, response[2], response[1]);
+			},
+			error: (err) => {
+				if (err.data !== undefined && err.data.Status !== undefined)
+					showAlert(err.data.Status);
+				else
+					showAlert("Error " + err.status + ": " + err.statusText);
+			}
+		});
+	}
 }
 function requestRedaction() {
 	if (!validateSearch())

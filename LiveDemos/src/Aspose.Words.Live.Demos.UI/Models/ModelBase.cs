@@ -121,6 +121,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 				FolderName = outFolder,
 				Status = statusValue,
 				StatusCode = statusCodeValue,
+				FileProcessingErrorCode = FileProcessingErrorCode.OK
 			};
 		}
 		///<Summary>

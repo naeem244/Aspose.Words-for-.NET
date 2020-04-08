@@ -109,6 +109,11 @@ namespace Aspose.Words.Live.Demos.UI
 				 new { controller = "Viewer", action = "Viewer" }
 			);
 			routes.MapRoute(
+				"AsposeWordsMetadataRoute",
+				"{product}/metadata",
+				 new { controller = "Metadata", action = "Metadata" }
+			);
+			routes.MapRoute(
 				"AsposeWordsEditorRoute",
 				"{product}/editor",
 				 new { controller = "Editor", action = "Editor" }
@@ -128,11 +133,27 @@ namespace Aspose.Words.Live.Demos.UI
 				"{Product}/edit",
 				"~/Editor/Default.aspx"
 			);
+			//routes.MapRoute(
+			//	"AsposeWordsMetadataClearRoute",
+			//	"AsposeWordsMetadata/clear",
+			//	 new { controller = "AsposeWordsMetadata", action = "Clear" }
+			//);
+			//routes.MapRoute(
+			//	"AsposeWordsMetadataDownloadRoute",
+			//	"AsposeWordsMetadata/download",
+			//	 new { controller = "AsposeWordsMetadata", action = "Download" }
+			//);
+			//routes.MapRoute(
+			//	"AsposeWordsMetadatapropertiesRoute",
+			//	"AsposeWordsMetadata/properties",
+			//	 new { controller = "AsposeWordsMetadata", action = "Properties" }
+			//);
 			routes.MapRoute(
 				"AsposeWordsDocumentInfoViewerRoute",
 				"{product}/viewer/documentInfo",
 				 new { controller = "Viewer", action = "DocumentInfo" }
 			);
+
 			routes.MapRoute(
 				"DownloadFileRoute",
 				"common/download",

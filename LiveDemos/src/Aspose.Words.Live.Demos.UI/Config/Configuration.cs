@@ -15,6 +15,8 @@ namespace Aspose.Words.Live.Demos.UI.Config
 		private static string _resourceFileSessionName = ConfigurationManager.AppSettings["ResourceFileSessionName"];	      
 		private static string _fileViewLink = ConfigurationManager.AppSettings["FileViewLink"];		
 		private static string _productsAsposeAppAssetURL = ConfigurationManager.AppSettings["ProductsAsposeAppAssetURL"];
+		private static string _fileDownloadLink = ConfigurationManager.AppSettings["FileDownloadLink"];
+		
 
 		public static string ResourceFileSessionName
 		{
@@ -65,7 +67,11 @@ namespace Aspose.Words.Live.Demos.UI.Config
         {
             get { return _asposeAppLiveDemosPath; }
         }
-        
+		public static string FileDownloadLink
+		{
+			get { return _fileDownloadLink; }
+		}
+		
 		public static string FileViewLink
 		{
 			get { return _fileViewLink; }

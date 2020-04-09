@@ -8,13 +8,16 @@
 	<res name="DownloadFileLinkTitle">Download your file</res>
 	<res name="EmailTitle">Download File</res>
 	<res name="btnTryitNow">Try it NOW</res>
+	<res name="AsposeProductFamilyInclude">{0} Product Family Includes</res>
 	<res name="FileConvertedSuccessMessage">Your file has been converted successfully, please check your email to download converted file</res>
 	<res name="InvalidFileExtension">Invalid file, please upload a file with extension</res>
 	<res name="InvalidFile">Invalid file, please ensure that uploading correct file</res>
 	<res name="SuccessfullyUploaded">Successfully uploaded</res>
 	<res name="btnConvertNow">CONVERT NOW</res>
+	<res name="AssemblyAPPName">Assembly</res>
 	<res name="AsposeWords">Aspose.Words</res>
 	<res name="PageNotFound">404 Page not found</res>
+	<res name="DropOrUploadImageFile">Drop or upload your image</res>
 	<res name="BrokenLinkTitle">The link you followed probably broken or the page has been moved</res>
 	<res name="btnBackHome">Back to Home</res>
   <res name="SaveAs">Save as</res>  
@@ -43,10 +46,8 @@
    <res name="PoweredBy">Powered by</res>
   <res name="Conversionh4">Conversion</res>
   <res name="DOCXExtension">DOCX</res>
-  <res name="SupportedDocuments">Supported Documents: {0}</res>
-  <res name="SaveAsDescription">Save as: {0}</res>
+	<res name="SupportedDocuments">Supported Documents: {0}</res> 
   <res name="ConversionCategory">conversion</res>
-  <res name="AsposeProductFamilyInclude">{0} Product Family Includes</res>
   <res name="WordsPageMainTitle">Free Word Document Apps</res>
   <res name="WordsPageSubHeading">Convert, Compare, Extract Images, Add Watermark or View your Word documents online from anywhere</res>
   <res name="ProductFamily">Product Family</res>
@@ -245,15 +246,7 @@
   
   <res name="wordsExtractImagesTitleSub">Read all images from Microsoft Office (DOC, DOCX, DOT, DOTX, RTF) and Open Document (ODT) files</res>
   
-  <res name="btnExtractImages">EXTRACT IMAGES</res>
-  <res name="ExtractImagesFeature1">Fast and Easy Extract Images</res>
-  <res name="ExtractImagesFeature1Description">Upload your document and click on “EXTRACT IMAGES” button. You will get the zip-file of images as soon as the Extraction is performed</res>
-  <res name="ExtractImagesFeature2">Extract Images from Anywhere</res>
-  <res name="ExtractImagesFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
-  <res name="ExtractImagesFeature3">Extract Images Quality</res>
-  <res name="ExtractImagesSuccessMessage">Your file has been processed successfully</res>
-  <res name="ExtractImagesAnotherFile">Extract images from another document</res>
-  <res name="NoImageFoundMessage">No images found</res>
+ 
 
   <res name="ComparisonAPPName">Comparison</res>
   
@@ -612,6 +605,48 @@
 	<res name="AnnotationFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
 	<res name="AnnotationFeature3">Annotation Quality</res>
 
+
+	<!-- Signature resources  -->
+	
+	<res name="wordsSignaturePageTitle">Sign Word Document Online Free</res>
+	<res name="wordsSignatureMetaDescription">Free online signature maker. Sign word documents.</res>
+	<res name="wordsSignatureTitle">Free online signature</res>
+	<res name="wordsSignatureSubTitle">Add signature as text, image or drawing in word documents.</res>
+	<res name="wordsSignatureSaveAsOptions">DOCX,DOC,DOT,DOCM,DOTX,DOTM,RTF,ODT,PDF,HTML,MHTML,EPUB,XPS,BMP,EMF,PNG,JPEG,GIF,TIFF</res>
+	<res name="wordsSignatureLiFeature1">Quick way to sign document</res>
+	<res name="wordsSignatureLiFeature2">Add signature to multiple files</res>
+	<res name="wordsSignatureLiFeature3">Draw signature</res>	
+	<res name="HowtoSignatureTitle">How to Sign Word Document using {1}</res>
+	<res name="HowtoSignatureFeature1">Click inside the file drop area to upload file or drag &amp; drop file.</res>
+	<res name="HowtoSignatureFeature2">From dropdown, please choose one of the options i.e. Drawing, Text or Image.</res>
+	<res name="HowtoSignatureFeature3">If you opt for Drawing, please draw your signature. You can also choose the drawing color. If you opt for Text, please add your signature text inside the textbox. If you opt for Image, please upload your signature image.</res>
+	<res name="HowtoSignatureFeature4">Select your "Save as" type or leave it as default.</res>
+	<res name="HowtoSignatureFeature5">Click "SIGN DOCUMENT" button to eSign your document.</res>
+	<res name="SignatureTextErrorMessage">Enter the text</res>
+	<res name="SignatureDrawingErrorMessage">Draw the signature</res>
+	<res name="AddSignatureinAnotherFile">Sign another document</res>
+	<res name="AddSignatureButton">SIGN DOCUMENT</res>
+	<res name="AddSignatureTextPlaceholder">Add Your Text Signature</res>
+	<res name="SignatureFeature1">Fast and Easy Signature</res>
+	<res name="SignatureFeature1Description">Upload your document, select signature type and click on “SIGN DOCUMENT” button. You will get the download link as soon as the file is signed</res>
+	<res name="SignatureFeature2">Sign from Anywhere</res>
+	<res name="SignatureFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
+	<res name="SignatureFeature3">Signature Quality</res>
+	<res name="SignatureLiFeature1">Instantly download or send output file as an email</res>
+	<res name="SignatureOtherFeaturesTitle">Other Supported Signatures</res>
+	<res name="SignatureOtherFeaturesTitleSub">You can also add signature in other file formats. Please see the list below.</res>
+	<res name="AddSignatureImageFileExtenstions">.jpg|.jpeg|.png|.bmp</res>
+	<res name="AddSignatureSuccessMessage">Signature has been added successfully</res>
+	<res name="AddSignatureURL">sign</res>
+	<res name="SignatureViewer">VIEW RESULTS</res>
+	<res name="SignatureTypeDrawing">Drawing</res>
+	<res name="SignatureTypeText">Text</res>
+	<res name="SignatureTypeImage">Image</res>
+	<res name="SignatureButton">SIGN</res>
+	<res name="SignatureSuccessMessage">Signature has been added successfully</res>
+	<res name="SignatureSentEmailSuccessMessage">Your files has been signed successfully, please check your email to download them</res>
+	<res name="SignatureAnotherFile">Sign other documents</res>
+	<res name="SignatureAction">Sign</res>
 </resources>
 
 

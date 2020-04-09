@@ -183,12 +183,22 @@ namespace Aspose.Words.Live.Demos.UI.Models
     /// </summary>
     protected static readonly Encoding UTF8WithoutBom = new UTF8Encoding(false);
 
-    
+		/// <summary>
+		/// Prepare upload files and return FileData
+		/// </summary>
+		protected async Task<Collection<MultipartFileData>> UploadFiles()
+		{
+			Opts.FolderName = Guid.NewGuid().ToString();
+			var pathProcessor = new PathProcessor(Opts.FolderName);
+			var uploadProvider = new MultipartFormDataStreamProviderSafe(pathProcessor.SourceFolder);
+			await Request.Content.ReadAsMultipartAsync(uploadProvider);
+			return uploadProvider.FileData;
+		}
 
-    /// <summary>
-    /// AsposeWordsBase
-    /// </summary>
-    public AsposeWordsBase()
+		/// <summary>
+		/// AsposeWordsBase
+		/// </summary>
+		public AsposeWordsBase()
     {
     
       Opts.ModelName = GetType().Name;

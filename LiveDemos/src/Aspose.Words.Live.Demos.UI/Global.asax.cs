@@ -83,6 +83,11 @@ namespace Aspose.Words.Live.Demos.UI
 				"{product}/merger",
 				 new { controller = "Merger", action = "Merger" }
 			);
+			routes.MapPageRoute(
+			  "AsposeWordsAssemblyRoute",
+			  "{Product}/assembly",
+			  "~/Assembly/AssemblyApp.aspx"
+			);
 			routes.MapRoute(
 				"AsposeWordsAnnotationRoute",
 				"{product}/annotation",
@@ -133,21 +138,11 @@ namespace Aspose.Words.Live.Demos.UI
 				"{Product}/edit",
 				"~/Editor/Default.aspx"
 			);
-			//routes.MapRoute(
-			//	"AsposeWordsMetadataClearRoute",
-			//	"AsposeWordsMetadata/clear",
-			//	 new { controller = "AsposeWordsMetadata", action = "Clear" }
-			//);
-			//routes.MapRoute(
-			//	"AsposeWordsMetadataDownloadRoute",
-			//	"AsposeWordsMetadata/download",
-			//	 new { controller = "AsposeWordsMetadata", action = "Download" }
-			//);
-			//routes.MapRoute(
-			//	"AsposeWordsMetadatapropertiesRoute",
-			//	"AsposeWordsMetadata/properties",
-			//	 new { controller = "AsposeWordsMetadata", action = "Properties" }
-			//);
+			routes.MapRoute(
+				"AsposeWordsSignatureRoute",
+				"{Product}/signature",
+				 new { controller = "Signature", action = "Signature" }
+			);
 			routes.MapRoute(
 				"AsposeWordsDocumentInfoViewerRoute",
 				"{product}/viewer/documentInfo",

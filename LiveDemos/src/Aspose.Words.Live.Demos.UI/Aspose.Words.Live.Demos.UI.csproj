@@ -78,6 +78,9 @@
     <Reference Include="AspNet.ScriptManager.jQuery, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
+    <Reference Include="Aspose.Cells, Version=20.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Aspose.Cells.20.3.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
     <Reference Include="Aspose.Words, Version=20.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Aspose.Words.20.2.0\lib\net40\Aspose.Words.dll</HintPath>
     </Reference>
@@ -106,6 +109,7 @@
       <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -215,6 +219,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assembly\app.controller.main.js" />
+    <Content Include="Assembly\app.js" />
+    <Content Include="Assembly\app.run.js" />
+    <Content Include="Assembly\AssemblyApp.aspx" />
+    <Content Include="Assembly\wordsHelpDataSource.html" />
+    <Content Include="Assembly\wordsHelpTemplate.html" />
     <Content Include="css\asposeapp.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\editor.css" />
@@ -288,6 +298,22 @@
     <Content Include="Editor\Trumbowyg\trumbowyg.min.css" />
     <Content Include="Editor\Trumbowyg\trumbowyg.min.js" />
     <Content Include="img\asposetoolsnew.png" />
+    <Content Include="img\aspose_annotation-app.png" />
+    <Content Include="img\aspose_assembly-app.png" />
+    <Content Include="img\aspose_comparison-app.png" />
+    <Content Include="img\aspose_conversion-app.png" />
+    <Content Include="img\aspose_editor-app.png" />
+    <Content Include="img\aspose_merger-app.png" />
+    <Content Include="img\aspose_metadata-app.png" />
+    <Content Include="img\aspose_parser-app.png" />
+    <Content Include="img\aspose_protect-app.png" />
+    <Content Include="img\aspose_redaction-app.png" />
+    <Content Include="img\aspose_search-app.png" />
+    <Content Include="img\aspose_signature-app.png" />
+    <Content Include="img\aspose_unlock-app.png" />
+    <Content Include="img\aspose_viewer-app.png" />
+    <Content Include="img\aspose_watermark-app.png" />
+    <Content Include="img\aspose_words-splitter-app.png" />
     <Content Include="img\barcode\AustralianPosteParcel.png" />
     <Content Include="img\barcode\AustraliaPost.png" />
     <Content Include="img\barcode\Aztec.png" />
@@ -455,6 +481,9 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include=".eslintignore" />
+    <Content Include="Assembly\Invitation.pdf" />
+    <Content Include="Assembly\SampleTemplates\Data.xlsx" />
+    <Content Include="Assembly\SampleTemplates\Template.xlsx" />
     <None Include="bundleconfig.json" />
     <Content Include="Editor\Trumbowyg\plugins\colors\ui\sass\trumbowyg.colors.scss" />
     <Content Include="Editor\Trumbowyg\plugins\emoji\ui\sass\trumbowyg.emoji.scss" />
@@ -492,7 +521,29 @@
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Bundle.config" />
     <Content Include="Scripts\Shared\metadata.js" />
+    <Content Include="Scripts\Shared\signature.js" />
     <Content Include="Scripts\Shared\splitter.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewerApp\app.controller.main.js" />
     <Content Include="ViewerApp\app.js" />
     <Content Include="ViewerApp\Default.aspx" />
@@ -588,13 +639,16 @@
     <Content Include="Views\Protect\Protect.cshtml" />
     <Content Include="Views\Annotation\Annotation.cshtml" />
     <Content Include="Views\Redaction\Redaction.cshtml" />
-    <Content Include="Views\Shared\RedactionControls.cshtml" />
-    <Content Include="Views\Shared\SearchControls.cshtml" />
+    <Content Include="Views\Redaction\RedactionControls.cshtml" />
+    <Content Include="Views\Search\SearchControls.cshtml" />
     <Content Include="Views\Search\Search.cshtml" />
-    <Content Include="Views\Shared\SplitterControls.cshtml" />
+    <Content Include="Views\Splitter\SplitterControls.cshtml" />
     <Content Include="Views\Splitter\Splitter.cshtml" />
     <Content Include="Views\Metadata\Metadata.cshtml" />
-    <Content Include="Views\Shared\MetadataControls.cshtml" />
+    <Content Include="Views\Metadata\MetadataControls.cshtml" />
+    <Content Include="Views\Signature\Signature.cshtml" />
+    <Content Include="Views\Signature\SignatureControls.cshtml" />
+    <Content Include="site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -604,7 +658,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Assembly\AssemblyApp.aspx.cs">
+      <DependentUpon>AssemblyApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assembly\AssemblyApp.aspx.designer.cs">
+      <DependentUpon>AssemblyApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AsposeWordsAssemblyController.cs" />
     <Compile Include="Controllers\AsposeWordsMetadataController.cs" />
+    <Compile Include="Controllers\AsposeWordsSignatureController.cs" />
+    <Compile Include="Controllers\SignatureController.cs" />
     <Compile Include="Controllers\SplitterController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ProtectController.cs" />
@@ -638,6 +702,7 @@
     <Compile Include="Helpers\MultipartFormDataStreamProviderSafe.cs" />
     <Compile Include="Helpers\PathSafe.cs" />
     <Compile Include="Controllers\AsposeWordsViewerController.cs" />
+    <Compile Include="Models\AsposeWordsAssembly.cs" />
     <Compile Include="Models\AsposeWordsSplitter.cs" />
     <Compile Include="Models\AsposeWordsRedaction.cs" />
     <Compile Include="Models\AsposeWordsComparison.cs" />
@@ -646,6 +711,7 @@
     <Compile Include="Models\AsposeWordsProtection.cs" />
     <Compile Include="Models\AsposeWordsSearch.cs" />
     <Compile Include="Models\FileSafeResult.cs" />
+    <Compile Include="Models\MimeMultipart.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Helpers\XmlActionResult.cs" />
     <Compile Include="Models\AsposeWordsBase.cs" />
@@ -693,6 +759,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PathProcessor.cs" />
     <Compile Include="Services\RequestData.cs" />
+    <Compile Include="site.Master.cs">
+      <DependentUpon>site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site.Master.designer.cs">
+      <DependentUpon>site.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewerApp\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

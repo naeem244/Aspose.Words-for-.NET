@@ -7,6 +7,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 pt-5 pb-5">
+							<a href="/default" class="btn btn-success btn-lg">Home</a>
                             <h1 runat="server" id="ProductTitle"></h1>
                             <h4 runat="server" id="ProductTitleSub"></h4>
                             <div class="form">

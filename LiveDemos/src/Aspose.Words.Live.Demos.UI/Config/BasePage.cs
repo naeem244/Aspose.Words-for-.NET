@@ -33,10 +33,6 @@ namespace Aspose.Words.Live.Demos.UI.Config
 			}
 			set => _product = value;
 		}
-
-		
-
-
 		public string _pageProductTitle;
 		/// <summary>
 		/// Product title (e.g. Aspose.Words)
@@ -50,7 +46,7 @@ namespace Aspose.Words.Live.Demos.UI.Config
 				return _pageProductTitle;
 			}
 		}
-		
+
 		private int _appURLID = 0;
 		public int AppURLID
 		{
@@ -59,7 +55,7 @@ namespace Aspose.Words.Live.Demos.UI.Config
 				return _appURLID;
 			}
 		}
-		
+
 		protected override void OnLoad(EventArgs e)
 		{
 			if (Resources != null)

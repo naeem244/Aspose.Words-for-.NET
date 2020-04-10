@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<res name="ApplicationTitle">Free File Format Apps</res>
-	<res name="ApplicationTitle2">Convert your Word, PDF and Excel documents online from anywhere</res>
-	<res name="ConversionPageTitle">Convert your {0} document to {1} format</res>
-	<res name="ConversionFeatureTitle">{0} to {1}</res>
-	<res name="HomePageTitle">Home</res>
-	<res name="DownloadFileLinkTitle">Download your file</res>
-	<res name="EmailTitle">Download File</res>
-	<res name="btnTryitNow">Try it NOW</res>
+	<res name="ApplicationTitle2">Convert your Word, PDF and Excel documents online from anywhere</res>	
+	<res name="HomePageTitle">Home</res>	
 	<res name="AsposeProductFamilyInclude">{0} Product Family Includes</res>
 	<res name="FileConvertedSuccessMessage">Your file has been converted successfully, please check your email to download converted file</res>
 	<res name="InvalidFileExtension">Invalid file, please upload a file with extension</res>

@@ -35,7 +35,7 @@
 	<res name="AsposeProductFor"></res>
 	<res name="UnlockButton">UNLOCK NOW</res>
 	<res name="RedactionButton">REDACT NOW</res>
-
+	<res name="AddWatermarkTextPlaceholder">Add Watermark Text</res>
   <res name="AsposeWordsDescription">Convert Word documents to PDF, HTML, Open Office, image and other formats</res>
     <res name="Feature1">Fast and Easy Conversion</res>
   <res name="Feature1Description">Upload your document, choose the save format type and click on “Convert” button. You will get the download link as soon as the file is converted</res>
@@ -156,7 +156,7 @@
   <res name="WordsWatermarkFeature2">Add Watermark from Anywhere</res>
   <res name="WordsWatermarkFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
   <res name="WordsWatermarkFeature3">Watermark Quality</res>
-  <res name="WordsWatermarkLiFeature1">Instantly download or send output file as an email</res>
+  <res name="WordsWatermarkLiFeature1">Instantly download output file</res>
   <res name="WatermarkViewer">VIEW RESULTS</res>
   <res name="WatermarkAnotherFile">Add or remove watermark in another file</res>
   <res name="WatermarkAction">Add watermark in</res>
@@ -172,6 +172,8 @@
   <res name="AddWatermarkPageTitle">Add Watermark</res>
   <res name="AddWatermarkSubPageTitle">Add Watermark to your Word document</res>
   <res name="RemoveWatermarkPageTitle">Remove Watermark</res>
+	<res name="wordsWatermarkPageTitle">Watermark Word Documents</res>
+	<res name="wordsWatermarkMetaDescription">Add a watermark in Word documents online.</res>
   <res name="RemoveWatermarkSubPageTitle">Remove Watermark from your Word document</res>
   <res name="AddWatermarkinTableCellPageTitle">Add Watermark in Table Cell</res>
   <res name="AddWatermarkinTableCellPageSubTitle">Add Watermark in Table Cell of your word document</res>

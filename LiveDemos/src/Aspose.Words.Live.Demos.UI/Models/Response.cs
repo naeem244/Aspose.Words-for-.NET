@@ -45,7 +45,19 @@ namespace Aspose.Words.Live.Demos.UI.Models
 		/// Get or set FileProcessingErrorCode
 		///</Summary>
 		public FileProcessingErrorCode FileProcessingErrorCode { get; set; }
-					   
+		public string DownloadURL()
+		{
+			var url = new StringBuilder( Config.Configuration.FileDownloadLink);
+			url.Append("?FileName=");
+			url.Append(HttpUtility.UrlPathEncode(FileName));			
+			if (!string.IsNullOrEmpty(FolderName))
+			{
+				url.Append("&FolderName=");
+				url.Append(FolderName);
+			}
+
+			return url.ToString();
+		}
 		public string ViewerURL(string product, string callbackURL)
 		{
 			var url = new StringBuilder();

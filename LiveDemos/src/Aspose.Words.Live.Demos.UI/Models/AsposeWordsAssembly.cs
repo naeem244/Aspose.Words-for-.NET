@@ -83,7 +83,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
       }
       catch (Exception ex)
       {
-        
+				Console.WriteLine(ex.Message);
         return null;
       }
     }

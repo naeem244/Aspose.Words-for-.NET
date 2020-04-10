@@ -68,7 +68,7 @@ namespace Aspose.Words.Live.Demos.UI.Models
 				outFolder = guid2;
 				zipOutfileName = zipFileName + ".zip";
 				zipOutPath = Aspose.Words.Live.Demos.UI.Config.Configuration.OutputDirectory + guid2;
-				Directory.CreateDirectory(zipOutPath);
+				//Directory.CreateDirectory(zipOutPath);
 				zipOutPath += "/" + zipOutfileName;
 			}
 

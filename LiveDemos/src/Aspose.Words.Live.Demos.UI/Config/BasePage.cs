@@ -34,24 +34,7 @@ namespace Aspose.Words.Live.Demos.UI.Config
 			set => _product = value;
 		}
 
-		private string _feature;
-		/// <summary>
-		/// Product name (e.g. words, cells)
-		/// </summary>
-		public string Feature
-		{
-			get
-			{
-				if (_feature == null)
-					if (Page.RouteData.Values.ContainsKey("Feature"))
-						_feature = Page.RouteData.Values["Feature"].ToString().ToLower();
-					else
-						_feature = "";
-					
-				return _feature;
-			}
-			set => _feature = value;
-		}
+		
 
 
 		public string _pageProductTitle;
@@ -67,30 +50,7 @@ namespace Aspose.Words.Live.Demos.UI.Config
 				return _pageProductTitle;
 			}
 		}
-		private string _productH1 = "";
-		public string ProductH1
-		{
-			get
-			{
-				return _productH1;
-			}
-		}
-		private string _productH4 = "";
-		public string ProductH4
-		{
-			get
-			{
-				return _productH4;
-			}
-		}
-		private string _extension1 = "";
-		public string Extension1
-		{
-			get
-			{
-				return _extension1;
-			}
-		}
+		
 		private int _appURLID = 0;
 		public int AppURLID
 		{
@@ -99,14 +59,7 @@ namespace Aspose.Words.Live.Demos.UI.Config
 				return _appURLID;
 			}
 		}
-		private string _extension1Description = "";
-		public string Extension1Description
-		{
-			get
-			{
-				return _extension1Description;
-			}
-		}
+		
 		protected override void OnLoad(EventArgs e)
 		{
 			if (Resources != null)
@@ -230,14 +183,20 @@ namespace Aspose.Words.Live.Demos.UI.Config
 		/// Save uploaded file to the directory
 		/// </summary>
 		/// <returns>SaveLocation with filename</returns>
-		private string SaveUploadedFile(string directory, HtmlInputFile fileInput)
+		private FileUploadResponse SaveUploadedFile(string directory, HtmlInputFile fileInput, string folder)
 		{
 			var fn = Path.GetFileName(fileInput.PostedFile.FileName); // Edge browser sents a full path for a filename
-            var saveLocation = Path.Combine(directory, fn);
+			var saveLocation = Path.Combine(directory, fn);
 			fileInput.PostedFile.SaveAs(saveLocation);
-			return saveLocation;
-		}
 
+			return new FileUploadResponse
+			{
+				FileName = fn,
+				FileLength = fileInput.PostedFile.ContentLength,
+				FolderId = folder,
+				LocalFilePath = saveLocation
+			};
+		}
 		/// <summary>
 		/// Check response for null and StatusCode. Call action if everything is fine or show error message if not
 		/// </summary>
@@ -280,20 +239,16 @@ namespace Aspose.Words.Live.Demos.UI.Config
 			}
 			ShowErrorMessage(control, txt);
 		}
-		protected void SetFormatInformations(string format, HtmlControl dvAppProductSection, HtmlControl dvHowToSection, HtmlControl dvExtensionDescription )
+		protected Collection<FileUploadResponse> UploadFiles(params HtmlInputFile[] fileInputs)
 		{
-			if (Page.RouteData.Values[format] != null)
-			{
-				// Populate contents from database based on URL
-				string _url = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
-				if (dvAppProductSection != null)
-				{
-					dvAppProductSection.Visible = false;
-				}
-				
-				//Page.Title = hMainTitle.InnerText; // Resources["PerformOCR"];		
+			//Collection<FileUploadResponse> uploadResult = null;
+			string _folderName = Guid.NewGuid().ToString();
+			var directory = Path.Combine(Configuration.WorkingDirectory,_folderName);
+			Directory.CreateDirectory(directory);
+			var uploadResult =  fileInputs.Select(x => SaveUploadedFile(directory, x, _folderName)).ToArray();
 
-			}
+			var list = new Collection<FileUploadResponse>(uploadResult);
+			return list;
 		}
 		protected void ShowErrorMessage(HtmlGenericControl control, string message)
 		{

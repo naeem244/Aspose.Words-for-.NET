@@ -586,6 +586,7 @@
     <Content Include="ViewerApp\Resources\viewer\images\preloader-spinner.svg" />
     <Content Include="ViewerApp\Resources\viewer\js\viewer.js" />
     <Content Include="ViewerApp\Resources\viewer\js\viewer.min.js" />
+    <Content Include="Watermark\WatermarkWords.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -710,6 +711,7 @@
     <Compile Include="Models\AsposeWordsParser.cs" />
     <Compile Include="Models\AsposeWordsProtection.cs" />
     <Compile Include="Models\AsposeWordsSearch.cs" />
+    <Compile Include="Models\AsposeWordsWatermark.cs" />
     <Compile Include="Models\FileSafeResult.cs" />
     <Compile Include="Models\MimeMultipart.cs" />
     <Compile Include="Models\ModelBase.cs" />
@@ -772,6 +774,13 @@
     </Compile>
     <Compile Include="ViewerApp\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watermark\WatermarkWords.aspx.cs">
+      <DependentUpon>WatermarkWords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Watermark\WatermarkWords.aspx.designer.cs">
+      <DependentUpon>WatermarkWords.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

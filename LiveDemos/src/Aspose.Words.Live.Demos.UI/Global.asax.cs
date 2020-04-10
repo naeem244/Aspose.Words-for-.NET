@@ -68,6 +68,11 @@ namespace Aspose.Words.Live.Demos.UI
 				"{product}/redaction",
 				 new { controller = "Redaction", action = "Redaction" }
 			);
+			routes.MapPageRoute(
+				"AsposeWordsWatermarkRoute",
+				"words/watermark",
+				"~/Watermark/WatermarkWords.aspx"
+			);
 			routes.MapRoute(
 				"AsposeWordsSearchRoute",
 				"{product}/search",

@@ -13,8 +13,6 @@ using Aspose.Words;
 using Aspose.Words.Layout;
 using Aspose.Words.Markup;
 using Aspose.Words.Tables;
-
-
 namespace Aspose.Words.Live.Demos.UI.Models
 {
 	///<Summary>
